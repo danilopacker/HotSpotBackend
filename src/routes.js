@@ -1,12 +1,12 @@
 const { Router } = require('express');
-const ContactController = require('./app/controllers/ContactController');
+const AccessController = require('./app/controllers/AccessController');
 
 const router = Router();
 
-router.get('/contacts', ContactController.index);
-router.get('/contacts:id', ContactController.show);
-router.delete('/contacts:id', ContactController.delete);
-router.post('/contacts', ContactController.store);
-router.put('/contacts:id', ContactController.update);
+router.get('/access', AccessController.index);
+router.get('/access/:id', AccessController.show);
+router.delete('/access/:id', AccessController.delete);
+router.post('/access', AccessController.store);
+router.put('/access/:id', AccessController.update);
 
 module.exports = router;
